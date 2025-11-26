@@ -1,0 +1,193 @@
+/* given the same formatting layout of pages 2 & 3 (efforts & goals for going green), the same stylesheet was linked to both pages */
+
+/* for the nav bar, same as home/index page */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0 16px;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#logopic {
+    height: 65px;
+    vertical-align: middle;
+}
+
+table, th, td {
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px;
+}
+
+#luntian {
+    color: white;
+    font-size: 30px;
+    margin-left: 8px;
+}
+
+/* sets background image, same as homepage */
+
+body {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* positions the small help button (not yet functional) */
+
+#help {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    transition: all 3s;
+    transition-timing-function: ease-in-out;
+}
+
+#help:hover {
+    transform: rotate(360deg);
+}
+
+/* uses flex to put the two divs side-by-side on the page */
+
+main {
+    display: flex;
+}
+
+/* sets font family to Arial */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*insert two sprites after header*/
+
+.sprite {
+    width: 48px;
+    height: 48px;
+    background-image: url("images/sprites.png");
+    background-size: 256px 256px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.sprite-row {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.sprite1 {
+    background-position: -190px -17px;
+}
+
+.sprite2 {
+    background-position: -400px -1665px;
+}
+
+/* aside contains the name of the page and a few paragraphs on the topic */
+
+aside {
+    border: 2px solid black;
+    padding: 20px;
+    flex-shrink: 0;
+    width: 350px;
+    background-color: white;
+}
+
+aside #head {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h3:only-of-type {
+    margin: 5px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+aside #par {
+    border-top: 2px solid black;
+    margin: 15px;
+}
+
+#partext {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+}
+
+/* this side holds web articles and video embeds sourced from Youtube pertaining to the said topic */
+
+#right-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#nter {
+    width: 350px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#nter, .video {
+    transition: transform 0.3s ease;
+}
+
+#nter:hover, #nter:active, .video:hover, .video:active {
+    transform: scale(1.5);
+}
+
+.arttext {
+    border-style: solid;
+    padding: 10px;
+    background-color: white;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.arttext p {
+    text-align: center;
+}
+
+p:first-child {
+    font-weight: bold;
+}
+
+.video {
+    display: block;
+    margin: auto;
+}
